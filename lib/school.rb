@@ -10,6 +10,7 @@ class School
   def add_student_name(student_name)
     student_names << student_name
   end
+  
 
   def end_time
     calculation = start_time.to_i + hours_in_school_day
@@ -22,8 +23,21 @@ class School
   end
 
   def standard_student_names
-    require "pry"; binding.pry
     student_names.map{|name| name.capitalize}
+  end
+
+  def convert_end_time_to_clock_time
+    calculation = start_time.to_i + hours_in_school_day
+    if calculation == 12
+      "12:00pm"
+    elsif calculation > 12 && calculation < 24
+      "#{calculation - 12}:00pm"
+    elsif calculation == 24
+      "12:00am"
+    else
+      "#{calculation}:00am"
+    end
+
   end
 
 end
