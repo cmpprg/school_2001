@@ -21,4 +21,9 @@ class School
     true
   end
 
+  def standard_student_names
+    require "pry"; binding.pry
+    student_names.map{|name| name.capitalize}
+  end
+
 end
