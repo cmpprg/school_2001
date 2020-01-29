@@ -16,4 +16,9 @@ class School
     "#{calculation}:00"
   end
 
+  def is_full_time?
+    return false unless hours_in_school_day > 4
+    true
+  end
+
 end
