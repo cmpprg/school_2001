@@ -11,4 +11,9 @@ class School
     student_names << student_name
   end
 
+  def end_time
+    calculation = start_time.to_i + hours_in_school_day
+    "#{calculation}:00"
+  end
+
 end
