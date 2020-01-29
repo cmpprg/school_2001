@@ -7,4 +7,8 @@ class School
     @student_names = []
   end
 
+  def add_student_name(student_name)
+    student_names << student_name
+  end
+
 end
